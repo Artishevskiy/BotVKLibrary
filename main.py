@@ -16,6 +16,7 @@ def main():
             print('Новое сообщение:')
             print('Для меня от:', event.obj.message['from_id'])
             print('Текст:', event.obj.message['text'])
+            print(1)
             vk = vk_session.get_api()
             vk.messages.send(user_id=event.obj.message['from_id'],
                              message="Спасибо, что написали нам. Мы обязательно ответим",
